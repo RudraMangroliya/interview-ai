@@ -397,3 +397,26 @@ $font-stack:     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Robot
   }
 
 }
+/* ---------- MOBILE FIX ---------- */
+
+@media (max-width: 768px) {
+
+  .create-plan-container {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .target-job,
+  .profile-section {
+    width: 100% !important;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .generate-button {
+    width: 100%;
+  }
+
+}
