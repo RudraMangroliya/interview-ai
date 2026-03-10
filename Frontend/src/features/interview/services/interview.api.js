@@ -5,6 +5,7 @@ const api = axios.create({
     withCredentials: true,
 })
 
+// Add a request interceptor to include the token in the Authorization header for all requests
 api.interceptors.request.use((config) => {
     const token = localStorage.getItem("token");
 
