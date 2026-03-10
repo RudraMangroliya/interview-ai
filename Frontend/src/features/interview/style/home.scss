@@ -420,3 +420,36 @@ $font-stack:     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Robot
   }
 
 }
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .interview-card__body {
+    flex-direction: column !important;
+  }
+
+  .panel-divider {
+    display: none;
+  }
+
+  .panel {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .panel__textarea {
+    min-height: 180px;
+  }
+
+  .interview-card__footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .generate-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
