@@ -1,14 +1,15 @@
 import { useAuth } from "../hooks/useAuth";
 import { Navigate } from "react-router";
 import React from 'react'
+import FullPageLoader from "../../../components/FullPageLoader";
 
 const Protected = ({children}) => {
-    const { loading,user } = useAuth()
-
+    const { loading, user } = useAuth()
 
     if(loading){
-        return (<main><h1>Loading...</h1></main>)
+        return <FullPageLoader message="Verifying session..." />
     }
+
 
     if(!user){
         return <Navigate to={'/login'} />
@@ -17,4 +18,4 @@ const Protected = ({children}) => {
     return children
 }
 
-export default Protected
+export default Protected

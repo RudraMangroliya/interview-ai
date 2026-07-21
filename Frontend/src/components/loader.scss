@@ -1,0 +1,99 @@
+// ── Simple & Clean FullPage Loader ──────────────────────────────────────────
+
+.fullpage-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0b0f17;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .simple-loader-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .simple-spinner {
+        width: 38px;
+        height: 38px;
+        border: 3px solid rgba(255, 45, 120, 0.2);
+        border-top-color: #ff2d78;
+        border-radius: 50%;
+        animation: spinSimple 0.8s linear infinite;
+    }
+
+    .simple-loader-title {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #e6edf3;
+        margin: 0;
+        letter-spacing: -0.01em;
+    }
+
+    .simple-loader-subtitle {
+        font-size: 0.825rem;
+        color: #8b949e;
+        margin: 0;
+    }
+}
+
+// ── Skeleton Loader ────────────────────────────────────────────────────────────
+.skeleton-reports {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .skeleton-card {
+        background-color: #161b22;
+        border: 1px solid #2a3348;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        flex: 1;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        .skeleton-line {
+            background: linear-gradient(90deg, #1c2230 25%, #252d40 50%, #1c2230 75%);
+            background-size: 200% 100%;
+            border-radius: 0.25rem;
+            animation: skeletonShimmer 1.5s infinite;
+
+            &.skeleton-title {
+                height: 1.1rem;
+                width: 70%;
+            }
+
+            &.skeleton-meta {
+                height: 0.85rem;
+                width: 40%;
+            }
+
+            &.skeleton-badge {
+                height: 0.9rem;
+                width: 50%;
+                margin-top: 0.25rem;
+            }
+        }
+    }
+}
+
+@keyframes spinSimple {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes skeletonShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

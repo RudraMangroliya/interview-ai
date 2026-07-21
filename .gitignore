@@ -1,0 +1,59 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# Environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!*.env.example
+
+# Build and production output
+dist/
+dist-ssr/
+build/
+out/
+bin/
+
+# Logs & debugging
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Uploads & Temporary files
+uploads/
+**/uploads/*
+!**/uploads/.gitkeep
+temp/
+tmp/
+*.tmp
+
+# Editor & IDE configs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vs/
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Coverage & test output
+coverage/
+.nyc_output/

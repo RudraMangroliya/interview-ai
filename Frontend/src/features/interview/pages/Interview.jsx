@@ -57,6 +57,8 @@ const RoadMapDay = ({ day }) => (
 )
 
 // ── Main Component ────────────────────────────────────────────────────────────
+import FullPageLoader from '../../../components/FullPageLoader'
+
 const Interview = () => {
     const [ activeNav, setActiveNav ] = useState('technical')
     const { report, getReportById, loading, getResumePdf } = useInterview()
@@ -68,15 +70,11 @@ const Interview = () => {
         }
     }, [ interviewId ])
 
-
-
     if (loading || !report) {
-        return (
-            <main className='loading-screen'>
-                <h1>Loading your interview plan...</h1>
-            </main>
-        )
+        return <FullPageLoader message="Loading your interview plan..." />
     }
+
+
 
     const scoreColor =
         report.matchScore >= 80 ? 'score--high' :

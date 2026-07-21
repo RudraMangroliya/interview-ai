@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { useNavigate, Link } from 'react-router'
 import { useAuth } from '../hooks/useAuth'
+import FullPageLoader from '../../../components/FullPageLoader'
 
 const Register = () => {
 
@@ -18,8 +19,9 @@ const Register = () => {
     }
 
     if(loading){
-        return (<main><h1>Loading.......</h1></main>)
+        return <FullPageLoader message="Creating account..." subtitle="Setting up your personal Interview AI profile..." />
     }
+
 
     return (
         <main>
