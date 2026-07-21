@@ -310,12 +310,30 @@ const Home = () => {
                 <section className='recent-reports'>
                     <h2>My Recent Interview Plans</h2>
                     {!user ? (
-                        <p className='no-reports-msg'>
-                            <button type="button" onClick={() => navigate('/login')} style={{ background: 'none', border: 'none', color: '#ff2d78', textDecoration: 'underline', cursor: 'pointer', padding: 0, font: 'inherit' }}>Sign in</button> to view and manage your saved interview plans history.
-                        </p>
+                        <div className='guest-cta-card'>
+                            <div className='guest-cta-badge'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                            </div>
+                            <div className='guest-cta-content'>
+                                <h3>Save &amp; Track Your Interview Strategy History</h3>
+                                <p>Sign in to save generated mock questions, track candidate match scores, and access your 7-day preparation roadmaps anytime.</p>
+                            </div>
+                            <div className='guest-cta-actions'>
+                                <button type="button" className='guest-btn guest-btn--primary' onClick={() => navigate('/login')}>
+                                    Sign In
+                                </button>
+                                <button type="button" className='guest-btn guest-btn--secondary' onClick={() => navigate('/register')}>
+                                    Create Account
+                                </button>
+                            </div>
+                        </div>
                     ) : reportsLoading ? (
                         <RecentReportsSkeleton />
                     ) : reports.length > 0 ? (
+
                         <ul className='reports-list'>
                             {reports.map(report => (
                                 <li key={report._id} className='report-item' onClick={() => navigate(`/interview/${report._id}`)}>
