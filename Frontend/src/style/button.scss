@@ -1,20 +1,47 @@
-.button{
-
+.button {
     border: none;
     outline: none;
-    padding-inline: 1.5rem;
-    padding-block: 0.75rem;
-    border-radius: 1rem;
+    padding-inline: clamp(0.75rem, 3.5vw, 1.5rem);
+    padding-block: clamp(0.5rem, 2vw, 0.75rem);
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-size: clamp(0.75rem, 3.2vw, 0.9rem);
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+    
+    // 3D tactile depth
+    border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 
-    transition: all 0.3s ease-in-out;
-
-    &.primary-button{
-        background-color: #e1034d;
+    &.primary-button {
+        background-color: #ff2d46;
         color: white;
+        border-bottom-color: #990f20;
+
+        &:hover {
+            background-color: #e02038;
+            border-bottom-color: #800a16;
+            box-shadow: 0 6px 12px rgba(255, 45, 70, 0.3);
+        }
+
+        &:active {
+            transform: translateY(2px);
+            border-bottom-width: 1px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
     }
 
-    &:active{
-        transform: scale(0.9);
+    &:active {
+        transform: translateY(2px);
+        border-bottom-width: 1px;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        pointer-events: none;
     }
 }

@@ -68,10 +68,9 @@ export const useInterview = () => {
     }
 
     const getResumePdf = async (interviewReportId) => {
-        setLoading(true)
         try {
             const response = await generateResumePdf({ interviewReportId })
-            const blob = new Blob([response], { type: "application/pdf" })
+            const blob = response instanceof Blob ? response : new Blob([response], { type: "application/pdf" })
             const url = window.URL.createObjectURL(blob)
 
             const link = document.createElement("a")
@@ -83,11 +82,10 @@ export const useInterview = () => {
 
             document.body.removeChild(link)
             window.URL.revokeObjectURL(url)
-
+            return true
         } catch (error) {
             console.error("Resume download error:", error)
-        } finally {
-            setLoading(false)
+            throw error
         }
     }
 
