@@ -128,8 +128,8 @@ const Home = () => {
                                 <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#genGrad)" />
                                 <defs>
                                     <linearGradient id="genGrad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                                        <stop stopColor="#ff2d78" />
-                                        <stop offset="1" stopColor="#9d4edd" />
+                                        <stop stopColor="#ff2d46" />
+                                        <stop offset="1" stopColor="#b3001e" />
                                     </linearGradient>
                                 </defs>
                             </svg>
