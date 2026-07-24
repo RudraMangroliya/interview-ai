@@ -113,7 +113,7 @@
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 600;
-            padding: 0.4rem 1rem;
+            padding: 0.55rem 1.25rem;
             border-radius: 0.5rem;
             transition: all 0.2s ease;
 
@@ -131,6 +131,7 @@
             &--register {
                 color: #ffffff;
                 background: linear-gradient(135deg, #ff2d46, #b3001e);
+                border: 1px solid transparent;
 
                 &:hover {
                     opacity: 0.9;
@@ -169,8 +170,8 @@
             gap: 0.4rem;
 
             .nav-auth-btn {
-                padding: 0.35rem 0.65rem;
-                font-size: 0.775rem;
+                padding: 0.55rem 1rem;
+                font-size: 0.825rem;
             }
         }
 
@@ -216,9 +217,9 @@
             gap: 0.3rem;
 
             .nav-auth-btn {
-                padding: 0.25rem 0.5rem;
-                font-size: 0.725rem;
-                border-radius: 0.3rem;
+                padding: 0.55rem 0.85rem;
+                font-size: 0.825rem;
+                border-radius: 0.5rem;
             }
         }
 
